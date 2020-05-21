@@ -9,7 +9,7 @@ class ModelTests(TestCase):
         email = 'rg171195@gmail.com'
         password = 'Password123'
         user = get_user_model().objects.create_user(email=email,
-        password=password)
+            password=password)
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
 
@@ -28,7 +28,7 @@ class ModelTests(TestCase):
         email = 'rg171195@gmail.com'
         password = 'Password123'
         user = get_user_model().objects.create_superuser(email=email,
-        password=password)
+            password=password)
 
         self.assertTrue(user.is_staff)
         self.assertTrue(user.is_superuser)
